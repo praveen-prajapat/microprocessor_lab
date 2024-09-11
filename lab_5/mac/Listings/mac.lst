@@ -1,0 +1,72 @@
+C51 COMPILER V9.60.7.0   MAC                                                               02/13/2024 02:48:17 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAC
+OBJECT MODULE PLACED IN .\Objects\mac.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE mac.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\mac.l
+                    -st) TABS(2) OBJECT(.\Objects\mac.obj)
+
+line level    source
+
+   1          #include <at89c5131.h>
+   2          #include "lcd.h"
+   3          
+   4          code unsigned char display_msg1[]="Input 1:        ";           //Display msg on 1st line of lcd
+   5          code unsigned char display_msg2[]="Input 2:        ";         //Display msg on 1st line of lcd
+   6          code unsigned char display_msg3[]="Prediction:     ";
+   7          code unsigned char display_msg4[]="Class 1         ";
+   8          code unsigned char display_msg5[]="Class 2         ";
+   9          
+  10          code float w0=-36;
+  11          code float w1=5;
+  12          code float w2=7;
+  13          
+  14          void main()
+  15          {
+  16   1        float x1,x2,y;
+  17   1        lcd_init();
+  18   1        lcd_cmd(0x80);                          //Move cursor to first line
+  19   1        msdelay(4);
+  20   1        lcd_write_string(display_msg1);
+  21   1        msdelay(5000);
+  22   1        P1=0x0F;
+  23   1        x1 = P1;
+  24   1        
+  25   1        lcd_cmd(0xC0);                          //Move cursor to 2nd line of LCD
+  26   1        msdelay(4);
+  27   1        lcd_write_string(display_msg2);
+  28   1        msdelay(5000);
+  29   1        P1=0x0F;
+  30   1        x2 = P1;
+  31   1        
+  32   1        lcd_cmd(0x80);                         //cursor to first line
+  33   1        msdelay(4);
+  34   1        lcd_write_string(display_msg3);
+  35   1        lcd_cmd(0xC0);
+  36   1        msdelay(4);
+  37   1        
+  38   1        y=w0+(x1*w1)+(x2*w2);
+  39   1          if (y<0 ){
+  40   2           lcd_write_string(display_msg4);
+  41   2          }else{
+  42   2           lcd_write_string(display_msg5);
+  43   2          }
+  44   1        while(1);
+  45   1          
+  46   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    370    ----
+   CONSTANT SIZE    =     97    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      15
+C51 COMPILER V9.60.7.0   MAC                                                               02/13/2024 02:48:17 PAGE 2   
+
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

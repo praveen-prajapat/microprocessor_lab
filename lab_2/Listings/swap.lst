@@ -1,0 +1,46 @@
+A51 MACRO ASSEMBLER  SWAP                                                                 01/23/2024 15:09:15 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\swap.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE swap.a51 SET(SMALL) DEBUG PRINT(.\Listings\swap.lst) OBJECT(.\Objects\s
+                      wap.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+0000                   2     ORG 0H
+0000 020100            3     LJMP MAIN
+0100                   4     ORG 100H
+0100                   5     MAIN:
+0100 3130              6     CALL XORSWAP
+0102 80FE              7     HERE: SJMP HERE
+0130                   8     ORG 130H
+                       9     
+0130                  10     XORSWAP:
+0130 6560             11     xrl a,60h          
+0132 6561             12     xrl a,61h          
+0134 F560             13     mov 60h,a
+0136 6561             14     xrl a,61h
+0138 F561             15     mov 61h,a
+013A 6560             16     xrl a,60h
+013C F560             17     mov 60h,a
+013E 22               18     RET
+                      19     END
+A51 MACRO ASSEMBLER  SWAP                                                                 01/23/2024 15:09:15 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+HERE . . . . . . .  C ADDR   0102H   A   
+MAIN . . . . . . .  C ADDR   0100H   A   
+XORSWAP. . . . . .  C ADDR   0130H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

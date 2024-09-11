@@ -1,0 +1,45 @@
+A51 MACRO ASSEMBLER  8_BIT_ADDER                                                          01/09/2024 15:08:28 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\8-bit-adder.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE 8-bit-adder.asm SET(SMALL) DEBUG PRINT(.\Listings\8-bit-adder.lst) OBJE
+                      CT(.\Objects\8-bit-adder.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0H
+0000 020100            2     LJMP MAIN
+0100                   3     ORG 100H
+                       4             
+0100                   5     MAIN:
+                       6     
+0100 3104              7     ACALL ADD8
+                       8     
+0102 80FE              9     HERE: SJMP HERE
+                      10     
+0104                  11     ADD8:
+0104 E530             12     MOV A,30H  
+0106 A931             13     MOV R1,31H 
+0108 29               14     ADD A,R1  
+0109 F533             15     MOV 33H,A
+010B 22               16     RET
+                      17     
+                      18     END
+A51 MACRO ASSEMBLER  8_BIT_ADDER                                                          01/09/2024 15:08:28 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ADD8 . . . . . . .  C ADDR   0104H   A   
+HERE . . . . . . .  C ADDR   0102H   A   
+MAIN . . . . . . .  C ADDR   0100H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

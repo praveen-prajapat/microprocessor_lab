@@ -1,0 +1,51 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    01/09/2024  15:08:28  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\8-bit-adder.obj TO .\Objects\8-bit-adder PRINT (.\Listings\8-bit-adder.m51) RAMSIZ
+>> E (256)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\8-bit-adder.obj (8_BIT_ADDER)
+
+
+LINK MAP OF MODULE:  .\Objects\8-bit-adder (8_BIT_ADDER)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     010CH     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\8-bit-adder (8_BIT_ADDER)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        8_BIT_ADDER
+  C:0104H         SYMBOL        ADD8
+  C:0102H         SYMBOL        HERE
+  C:0100H         SYMBOL        MAIN
+  C:0000H         LINE#         2
+  C:0100H         LINE#         7
+  C:0102H         LINE#         9
+  C:0104H         LINE#         12
+  C:0106H         LINE#         13
+  C:0108H         LINE#         14
+  C:0109H         LINE#         15
+  C:010BH         LINE#         16
+  -------         ENDMOD        8_BIT_ADDER
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 000FH BYTE ( 0%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=268
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

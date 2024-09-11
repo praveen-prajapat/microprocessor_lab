@@ -1,0 +1,54 @@
+A51 MACRO ASSEMBLER  LARGEST                                                              01/23/2024 15:12:34 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\largest.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE largest.a51 SET(SMALL) DEBUG PRINT(.\Listings\largest.lst) OBJECT(.\Obj
+                      ects\largest.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+0000                   2     ORG 0H
+0000 020100            3     LJMP MAIN
+0100                   4     ORG 100H
+0100                   5     MAIN:
+0100 3130              6     CALL MAX
+0102 80FE              7     HERE: SJMP HERE
+0130                   8     ORG 130H
+                       9     
+0130                  10     MAX:
+0130 7860             11     mov r0,#60h        
+0132 7907             12     mov r1,#07h        
+0134 8670             13     mov 70h,@r0        
+                      14     
+0136                  15     loop:
+0136 C3               16     clr c              
+0137 E570             17     mov a,70h          
+0139 08               18     inc r0             
+013A 96               19     subb a,@r0         
+013B 5002             20     jnc move           
+013D 8670             21     mov 70h,@r0        
+013F                  22     move:
+013F D9F5             23     djnz r1,loop       
+0141 22               24     RET
+                      25     END
+A51 MACRO ASSEMBLER  LARGEST                                                              01/23/2024 15:12:34 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+HERE . . . . . . .  C ADDR   0102H   A   
+LOOP . . . . . . .  C ADDR   0136H   A   
+MAIN . . . . . . .  C ADDR   0100H   A   
+MAX. . . . . . . .  C ADDR   0130H   A   
+MOVE . . . . . . .  C ADDR   013FH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\mac.obj" 
+TO ".\Objects\mac" 
+PRINT(".\Listings\mac.m51") RAMSIZE(256) 

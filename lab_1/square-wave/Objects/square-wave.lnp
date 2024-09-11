@@ -1,0 +1,3 @@
+".\Objects\square-wave.obj" 
+TO ".\Objects\square-wave" 
+PRINT(".\Listings\square-wave.m51") RAMSIZE(256) 

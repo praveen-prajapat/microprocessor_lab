@@ -1,0 +1,81 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    01/30/2024  15:48:05  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\delay_5.obj TO .\Objects\delay_5 PRINT (.\Listings\delay_5.m51) RAMSIZE (256)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\delay_5.obj (DELAY_5)
+
+
+LINK MAP OF MODULE:  .\Objects\delay_5 (DELAY_5)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     015AH     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\delay_5 (DELAY_5)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        DELAY_5
+  C:013BH         SYMBOL        DELAY_100MS
+  C:0146H         SYMBOL        DELAY_1MS
+  C:0151H         SYMBOL        DELAY_250US
+  C:0130H         SYMBOL        DELAY_5S
+  C:0155H         SYMBOL        H1
+  C:014AH         SYMBOL        H2
+  C:013FH         SYMBOL        H3
+  C:0134H         SYMBOL        H4
+  C:0106H         SYMBOL        HERE
+  C:0100H         SYMBOL        MAIN
+  D:0090H         SYMBOL        P1
+  C:0000H         LINE#         2
+  C:0100H         LINE#         5
+  C:0102H         LINE#         6
+  C:0104H         LINE#         7
+  C:0106H         LINE#         8
+  C:0130H         LINE#         12
+  C:0132H         LINE#         13
+  C:0134H         LINE#         14
+  C:0136H         LINE#         15
+  C:0138H         LINE#         16
+  C:013AH         LINE#         17
+  C:013BH         LINE#         20
+  C:013DH         LINE#         21
+  C:013FH         LINE#         22
+  C:0141H         LINE#         23
+  C:0143H         LINE#         24
+  C:0145H         LINE#         25
+  C:0146H         LINE#         28
+  C:0148H         LINE#         29
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/30/2024  15:48:05  PAGE 2
+
+
+  C:014AH         LINE#         30
+  C:014CH         LINE#         31
+  C:014EH         LINE#         32
+  C:0150H         LINE#         33
+  C:0151H         LINE#         36
+  C:0153H         LINE#         37
+  C:0155H         LINE#         38
+  C:0157H         LINE#         39
+  C:0159H         LINE#         40
+  -------         ENDMOD        DELAY_5
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0035H BYTE ( 2%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=346
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

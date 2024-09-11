@@ -1,0 +1,443 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    04/03/2024  15:16:54  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\keypad-kcd.obj TO .\Objects\keypad PRINT (.\Listings\keypad
+>> .m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL WITH FLOATING POINT ARITHMETIC
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\keypad-kcd.obj (KEYPAD_KCD)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPMUL)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FCAST)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?CASTF)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (POW)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPGETOPN)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?CHKFLOAT)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPADD)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPCMP)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPNEG)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (EXP)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (LOG)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPDIV)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPSERIES)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?IMUL)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?SLDIV)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?LNEG)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?LLDCODE)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?LLDCODE0)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?ULDIV)
+
+
+LINK MAP OF MODULE:  .\Objects\keypad (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0016H     UNIT         _DATA_GROUP_
+                    001EH     0002H                  *** GAP ***
+            BIT     0020H.0   0000H.1   UNIT         _BIT_GROUP_
+                    0020H.1   0000H.7                *** GAP ***
+            IDATA   0021H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0575H     UNIT         ?C?LIB_CODE
+            CODE    0D75H     01B9H     UNIT         ?PR?MAIN?KEYPAD_KCD
+            CODE    0F2EH     0135H     UNIT         ?PR?LOG?LOG
+            CODE    1063H     0120H     UNIT         ?CO?KEYPAD_KCD
+            CODE    1183H     0117H     UNIT         ?PR?_POW?POW
+            CODE    129AH     009AH     UNIT         ?PR?EXP?EXP
+            CODE    1334H     0044H     UNIT         ?C?LDIV
+            CODE    1378H     0037H     UNIT         ?PR?LCD_INIT?KEYPAD_KCD
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  04/03/2024  15:16:54  PAGE 2
+
+
+            CODE    13AFH     0029H     UNIT         ?PR?_SQ_WAVE?KEYPAD_KCD
+            CODE    13D8H     0025H     UNIT         ?PR?_LCD_WRITE_STRING?KEYPAD_KCD
+            CODE    13FDH     0024H     UNIT         ?PR?_MSDELAY?KEYPAD_KCD
+            CODE    1421H     0012H     UNIT         ?PR?_LCD_CMD?KEYPAD_KCD
+            CODE    1433H     0012H     UNIT         ?PR?_LCD_WRITE_CHAR?KEYPAD_KCD
+            CODE    1445H     000CH     UNIT         ?C_C51STARTUP
+            CODE    1451H     0007H     UNIT         ?PR?DELAY_20MS?KEYPAD_KCD
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\keypad (?C_STARTUP)
+
+
+SEGMENT                                     BIT_GROUP          DATA_GROUP 
+  +--> CALLED SEGMENT                    START    LENGTH     START    LENGTH
+----------------------------------------------------------------------------
+?C_C51STARTUP                            -----    -----      -----    -----
+  +--> ?PR?MAIN?KEYPAD_KCD
+
+?PR?MAIN?KEYPAD_KCD                      -----    -----      0008H    0008H
+  +--> ?PR?LCD_INIT?KEYPAD_KCD
+  +--> ?PR?_LCD_CMD?KEYPAD_KCD
+  +--> ?CO?KEYPAD_KCD
+  +--> ?PR?_LCD_WRITE_STRING?KEYPAD_KCD
+  +--> ?PR?_SQ_WAVE?KEYPAD_KCD
+  +--> ?PR?DELAY_20MS?KEYPAD_KCD
+  +--> ?PR?_POW?POW
+
+?PR?LCD_INIT?KEYPAD_KCD                  -----    -----      -----    -----
+  +--> ?PR?_LCD_CMD?KEYPAD_KCD
+  +--> ?PR?_MSDELAY?KEYPAD_KCD
+
+?PR?_LCD_CMD?KEYPAD_KCD                  -----    -----      -----    -----
+  +--> ?PR?_MSDELAY?KEYPAD_KCD
+
+?PR?_LCD_WRITE_STRING?KEYPAD_KCD         -----    -----      0010H    0003H
+  +--> ?PR?_LCD_WRITE_CHAR?KEYPAD_KCD
+
+?PR?_LCD_WRITE_CHAR?KEYPAD_KCD           -----    -----      -----    -----
+  +--> ?PR?_MSDELAY?KEYPAD_KCD
+
+?PR?DELAY_20MS?KEYPAD_KCD                -----    -----      -----    -----
+  +--> ?PR?_MSDELAY?KEYPAD_KCD
+
+?PR?_POW?POW                             -----    -----      0010H    000AH
+  +--> ?PR?LOG?LOG
+  +--> ?PR?EXP?EXP
+
+?PR?LOG?LOG                              0020H.0  0000H.1    001AH    0004H
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\keypad (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  04/03/2024  15:16:54  PAGE 3
+
+
+  -------         MODULE        ?C_STARTUP
+  C:1445H         SEGMENT       ?C_C51STARTUP
+  I:0021H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:1448H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:1445H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:1445H         LINE#         133
+  C:1447H         LINE#         134
+  C:1448H         LINE#         135
+  C:1449H         LINE#         136
+  C:144BH         LINE#         185
+  C:144EH         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        KEYPAD_KCD
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00C0H         PUBLIC        P4
+  D:00A8H         PUBLIC        IEN0
+  B:0080H.2       PUBLIC        EN
+  D:00B8H         PUBLIC        IPL0
+  C:1083H         PUBLIC        lookup
+  D:00D8H         PUBLIC        CCON
+  B:0080H.0       PUBLIC        RS
+  C:0D75H         PUBLIC        main
+  B:0080H.1       PUBLIC        RW
+  C:1063H         PUBLIC        freq
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  C:1451H         PUBLIC        delay_20ms
+  C:13D8H         PUBLIC        _lcd_write_string
+  C:1433H         PUBLIC        _lcd_write_char
+  C:1421H         PUBLIC        _lcd_cmd
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  04/03/2024  15:16:54  PAGE 4
+
+
+  C:1378H         PUBLIC        lcd_init
+  B:0088H.7       PUBLIC        TF1
+  D:008DH         PUBLIC        TH1
+  D:008BH         PUBLIC        TL1
+  D:00F8H         PUBLIC        UEPINT
+  B:0088H.6       PUBLIC        TR1
+  D:00C8H         PUBLIC        T2CON
+  B:0080H.7       PUBLIC        speaker
+  C:1401H         PUBLIC        _msdelay
+  C:13AFH         PUBLIC        _sq_wave
+  -------         PROC          LCD_INIT
+  C:1378H         LINE#         26
+  C:1378H         LINE#         27
+  C:1378H         LINE#         28
+  C:137BH         LINE#         29
+  C:137DH         LINE#         30
+  C:137FH         LINE#         31
+  C:1381H         LINE#         33
+  C:1387H         LINE#         34
+  C:138AH         LINE#         35
+  C:1391H         LINE#         36
+  C:1394H         LINE#         37
+  C:139BH         LINE#         38
+  C:139EH         LINE#         39
+  C:13A5H         LINE#         40
+  C:13A8H         LINE#         41
+  -------         ENDPROC       LCD_INIT
+  C:13FDH         SYMBOL        L?0048
+  -------         PROC          L?0047
+  -------         ENDPROC       L?0047
+  C:13FDH         SYMBOL        L?0048
+  -------         PROC          _MSDELAY
+  D:0006H         SYMBOL        time
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:1401H         LINE#         48
+  C:1401H         LINE#         49
+  C:1401H         LINE#         51
+  C:140BH         LINE#         52
+  C:140BH         LINE#         53
+  C:1419H         LINE#         54
+  C:1420H         LINE#         55
+  -------         ENDPROC       _MSDELAY
+  -------         PROC          _LCD_CMD
+  D:0006H         SYMBOL        i
+  C:1421H         LINE#         62
+  C:1421H         LINE#         63
+  C:1421H         LINE#         64
+  C:1423H         LINE#         65
+  C:1425H         LINE#         66
+  C:1427H         LINE#         67
+  C:1429H         LINE#         68
+  C:1430H         LINE#         69
+  C:1432H         LINE#         70
+  -------         ENDPROC       _LCD_CMD
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  04/03/2024  15:16:54  PAGE 5
+
+
+  -------         PROC          _LCD_WRITE_CHAR
+  D:0007H         SYMBOL        ch
+  C:1433H         LINE#         78
+  C:1433H         LINE#         79
+  C:1433H         LINE#         80
+  C:1435H         LINE#         81
+  C:1437H         LINE#         82
+  C:1439H         LINE#         83
+  C:143BH         LINE#         84
+  C:1442H         LINE#         85
+  C:1444H         LINE#         86
+  -------         ENDPROC       _LCD_WRITE_CHAR
+  -------         PROC          _LCD_WRITE_STRING
+  D:0010H         SYMBOL        s
+  C:13D8H         LINE#         94
+  C:13DEH         LINE#         95
+  C:13DEH         LINE#         96
+  C:13E9H         LINE#         97
+  C:13E9H         LINE#         98
+  C:13FAH         LINE#         99
+  C:13FCH         LINE#         100
+  -------         ENDPROC       _LCD_WRITE_STRING
+  -------         PROC          _SQ_WAVE
+  D:0004H         SYMBOL        count_freq
+  C:13AFH         LINE#         18
+  C:13B3H         LINE#         19
+  C:13B5H         LINE#         20
+  C:13B9H         LINE#         21
+  C:13BBH         LINE#         22
+  C:13BDH         LINE#         23
+  C:13BFH         LINE#         24
+  C:13C2H         LINE#         25
+  C:13C4H         LINE#         26
+  C:13C6H         LINE#         27
+  C:13C8H         LINE#         28
+  C:13CAH         LINE#         29
+  C:13CEH         LINE#         30
+  C:13D0H         LINE#         31
+  C:13D3H         LINE#         32
+  C:13D5H         LINE#         33
+  C:13D7H         LINE#         35
+  -------         ENDPROC       _SQ_WAVE
+  -------         PROC          DELAY_20MS
+  C:1451H         LINE#         36
+  C:1451H         LINE#         37
+  -------         ENDPROC       DELAY_20MS
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        i
+  D:000AH         SYMBOL        j
+  D:000CH         SYMBOL        acc
+  D:000EH         SYMBOL        temp
+  D:0002H         SYMBOL        count_freq
+  -------         ENDDO         
+  C:0D75H         LINE#         39
+  C:0D75H         LINE#         40
+  C:0D7EH         LINE#         42
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  04/03/2024  15:16:54  PAGE 6
+
+
+  C:0D81H         LINE#         43
+  C:0D84H         LINE#         44
+  C:0D84H         LINE#         45
+  C:0D87H         LINE#         46
+  C:0D87H         LINE#         47
+  C:0D9DH         LINE#         48
+  C:0DA4H         LINE#         49
+  C:0DD3H         LINE#         50
+  C:0E11H         LINE#         51
+  C:0E19H         LINE#         52
+  C:0E35H         LINE#         53
+  C:0E3CH         LINE#         54
+  C:0E3CH         LINE#         55
+  C:0E45H         LINE#         56
+  C:0E47H         LINE#         57
+  C:0E4EH         LINE#         58
+  C:0E56H         LINE#         59
+  C:0E5FH         LINE#         60
+  C:0E61H         LINE#         61
+  C:0E64H         LINE#         62
+  C:0E6BH         LINE#         63
+  C:0E71H         LINE#         64
+  C:0E7CH         LINE#         65
+  C:0E7CH         LINE#         66
+  C:0E7CH         LINE#         67
+  C:0E7CH         LINE#         68
+  C:0E82H         LINE#         69
+  C:0E82H         LINE#         70
+  C:0E8AH         LINE#         71
+  C:0E90H         LINE#         72
+  C:0ED2H         LINE#         73
+  C:0EDEH         LINE#         74
+  C:0EE1H         LINE#         75
+  C:0EEAH         LINE#         76
+  C:0EF0H         LINE#         77
+  C:0EF0H         LINE#         78
+  C:0EF0H         LINE#         79
+  C:0EF0H         LINE#         80
+  C:0F0BH         LINE#         81
+  C:0F10H         LINE#         82
+  C:0F13H         LINE#         83
+  C:0F19H         LINE#         84
+  C:0F1CH         LINE#         85
+  C:0F22H         LINE#         86
+  C:0F25H         LINE#         87
+  C:0F2BH         LINE#         88
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        KEYPAD_KCD
+
+  -------         MODULE        ?C?FPMUL
+  C:0800H         PUBLIC        ?C?FPMUL
+  -------         ENDMOD        ?C?FPMUL
+
+  -------         MODULE        ?C?FCAST
+  C:0910H         PUBLIC        ?C?FCASTC
+  C:090BH         PUBLIC        ?C?FCASTI
+  C:0906H         PUBLIC        ?C?FCASTL
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  04/03/2024  15:16:54  PAGE 7
+
+
+  -------         ENDMOD        ?C?FCAST
+
+  -------         MODULE        ?C?CASTF
+  C:0944H         PUBLIC        ?C?CASTF
+  -------         ENDMOD        ?C?CASTF
+
+  -------         MODULE        POW
+  D:0010H         PUBLIC        ?_pow?BYTE
+  C:1183H         PUBLIC        _pow
+  -------         ENDMOD        POW
+
+  -------         MODULE        ?C?CHKFLOAT
+  C:09C5H         PUBLIC        ?C?CHKFLOAT
+  -------         ENDMOD        ?C?CHKFLOAT
+
+  -------         MODULE        ?C?FPADD
+  C:09E6H         PUBLIC        ?C?FPADD
+  C:09E2H         PUBLIC        ?C?FPSUB
+  -------         ENDMOD        ?C?FPADD
+
+  -------         MODULE        ?C?FPCMP
+  C:0AD9H         PUBLIC        ?C?FPCMP
+  C:0AD7H         PUBLIC        ?C?FPCMP3
+  -------         ENDMOD        ?C?FPCMP
+
+  -------         MODULE        ?C?FPNEG
+  C:0B50H         PUBLIC        ?C?FPNEG
+  -------         ENDMOD        ?C?FPNEG
+
+  -------         MODULE        EXP
+  C:12D2H         PUBLIC        _EXP
+  -------         ENDMOD        EXP
+
+  -------         MODULE        LOG
+  C:0F62H         PUBLIC        _LOG
+  C:0F5EH         PUBLIC        _LOG10
+  -------         ENDMOD        LOG
+
+  -------         MODULE        ?C?FPDIV
+  C:0B64H         PUBLIC        ?C?FPDIV
+  -------         ENDMOD        ?C?FPDIV
+
+  -------         MODULE        ?C?CLDPTR
+  C:0C4EH         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+  -------         MODULE        ?C?IMUL
+  C:0C67H         PUBLIC        ?C?IMUL
+  -------         ENDMOD        ?C?IMUL
+
+  -------         MODULE        ?C?SLDIV
+  C:1334H         PUBLIC        ?C?SLDIV
+  -------         ENDMOD        ?C?SLDIV
+
+  -------         MODULE        ?C?LNEG
+  C:0C79H         PUBLIC        ?C?LNEG
+  -------         ENDMOD        ?C?LNEG
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  04/03/2024  15:16:54  PAGE 8
+
+
+
+  -------         MODULE        ?C?LLDCODE
+  C:0C87H         PUBLIC        ?C?LLDCODE
+  -------         ENDMOD        ?C?LLDCODE
+
+  -------         MODULE        ?C?LLDCODE0
+  C:0C97H         PUBLIC        ?C?LLDCODE0
+  -------         ENDMOD        ?C?LLDCODE0
+
+  -------         MODULE        ?C?ULDIV
+  C:0CE3H         PUBLIC        ?C?ULDIV
+  -------         ENDMOD        ?C?ULDIV
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 03BCH BYTE (46%) *
+******************************************************************************
+
+Program Size: data=31.1 xdata=0 code=3163
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
